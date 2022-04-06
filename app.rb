@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 
 class Battle < Sinatra::Base
+  enable :sessions
   configure :development do
     register Sinatra::Reloader
   end
@@ -16,11 +17,20 @@ class Battle < Sinatra::Base
 
   post '/names' do
     p params
-    @player1 = params[:player1]
-    @player2 = params[:player2]
-    erb(:play)
+    session[:player1] = params[:player1]
+    session[:player2] = params[:player2]
+    p session[:player1]
+    p session[:player2]
+    redirect '/play'
   end
 
+  get '/play' do
+    p session[:player1]
+    @player1 = session[:player1]
+    @player2 = session[:player2]
+    
+    erb(:play)
+  end
 
 
   run! if app_file == $0
