@@ -27,6 +27,11 @@ class Battle < Sinatra::Base
     @player1_hp = 100
     @player2_hp = 100
     erb(:play)
+    
+  end
+
+  post '/attack' do
+    erb(:attack)
   end
 
 
