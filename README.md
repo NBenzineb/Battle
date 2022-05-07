@@ -1,23 +1,26 @@
 # Battle
 
-Makers Academy Week 3 Pair Challenge
-
+Makers Academy Week 3 Pair Challenge. In this challenge, a basic project structure with Sinatra, RSpec, and Capybara is set up.
 ## Getting started
 
-`git clone path-to-your-repo`
-`command_to_install_dependencies` (e.g. `bundle`)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Usage
 
-`command_to_start` (e.g. `rackup` or `rails s`)
-Navigate to `http://localhost:4567/`
+1) `git clone `
 
+2) Install bundler via `gem install bundle` (if you don't have bundler already)
+
+4) Install dependencies via `bundle`
 
 ## Running tests
 
-`test_command` (e.g. `rspec`)
+Run `rspec` from the main directory to test the code and check coverage
 
-## File manifest
+## Deployment
+
+Run `rackup` or `rails s`
+Navigate to `http://localhost:4567/`
+
 
 ## User Stories
 
@@ -57,16 +60,4 @@ As a Player,
 So I can Lose a game of Battle,
 I want to see a 'Lose' message if I reach 0HP first
 
-----------------------------------------------
 
-At the barest minimum, it should contain a description of what the code does, how to install it, how to use it and how to run its tests. In addition, READMEs often include other information such as:
-
-- Configuration instructions
-- A file manifest (list of files included)
-- Copyright and licensing information
-- Contact information for the distributor or programmer
-- Known bugs
-- Troubleshooting
-- Credits and acknowledgments
-- A changelog (usually for programmers)
-- A news section (usually for users)
